@@ -1,0 +1,74 @@
+# ─────────────────────────────
+# Node / Dependências
+# ─────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+
+# ─────────────────────────────
+# Cypress – Arquivos gerados automaticamente
+# ─────────────────────────────
+# Vídeos dos testes (gerados a cada execução)
+cypress/videos/
+
+# Screenshots geradas automaticamente em casos de erro
+cypress/screenshots/
+
+# Logs e artefatos
+cypress/logs/
+
+# Arquivos temporários criados durante a execução
+cypress/downloads/
+cypress/uploads/
+
+# Folder creada pelo Chrome/Firefox em modo headless
+**/Crashpad/
+
+# ─────────────────────────────
+# Configurações locais de ambiente
+# ─────────────────────────────
+# Não versionar credenciais ou configs locais
+cypress.env.json
+cypress.local.config.js
+cypress.local.config.ts
+.env
+.env.*
+!.env.example
+
+# ─────────────────────────────
+# Sistema operacional
+# ─────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─────────────────────────────
+# IDEs / Editores
+# ─────────────────────────────
+# VSCode
+.vscode/
+.history/
+*.code-workspace
+
+# JetBrains
+.idea/
+
+# Sublime
+*.sublime-workspace
+*.sublime-project
+
+# ─────────────────────────────
+# Build / Artifacts
+# ─────────────────────────────
+dist/
+build/
+coverage/
+
+# ─────────────────────────────
+# Outros temporários
+# ─────────────────────────────
+*.log
+.tmp/
+temp/
