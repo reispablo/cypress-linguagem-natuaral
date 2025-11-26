@@ -1,29 +1,31 @@
-name: Cypress Tests
+name: Cypress
 
-on: [push]
+on:
+  push:
+  pull_request:
 
 jobs:
-  cypress-run:
+  e2e-tests:
     runs-on: ubuntu-latest
 
-    strategy:
-      fail-fast: false
-      matrix:
-        containers: [1, 2]  # paralelização
-
     steps:
-      - name: Checkout do código
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Instalar dependências
-        run: npm install
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-      - name: Executar testes Cypress
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Cypress tests (Cloud)
         uses: cypress-io/github-action@v6
         with:
-          record: true         # grava no Cypress Cloud
-          parallel: true       # usa a matrix acima
-          browser: chrome      # opcional ─ pode remover
+          runTests: true
+          record: true    
+          browser: chrome
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

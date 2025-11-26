@@ -1,19 +1,27 @@
 {
   "name": "cypress-linguagem-natuaral",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto Cypress utilizando linguagem natural com integração ao Cypress Cloud.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "open": "cypress open"
+    "open": "cypress open",
+    "test": "cypress run",
+    "run:cloud": "cypress run --record",
+    "verify": "cypress verify"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reispablo/cypress-linguagem-natuaral.git"
+    "url": "https://github.com/reispablo/cypress-linguagem-natuaral.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "cypress",
+    "testes-automatizados",
+    "qa",
+    "e2e",
+    "linguagem-natural"
+  ],
+  "author": "Pablo Reis",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/reispablo/cypress-linguagem-natuaral/issues"
   },
