@@ -1,12 +1,15 @@
-name: Cypress
+name: Cypress Tests
 
-on:
-  push:
-  pull_request:
+on: [push]
 
 jobs:
-  e2e-tests:
+  cypress-run:
     runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1, 2]  # 2 máquinas paralelas
 
     steps:
       - name: Checkout
@@ -20,12 +23,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run Cypress tests (Cloud)
+      - name: Cypress run (Cloud + Parallel)
         uses: cypress-io/github-action@v6
         with:
-          runTests: true
-          record: true    
-          browser: chrome
+          record: true
+          parallel: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
