@@ -14,7 +14,9 @@ describe('Login - Plataforma Quanta', () => {
 
                 'type "Test@mobi25" into the password field',
 
-                'click the "Entrar na plataforma" button'
+                'click the "Entrar na plataforma" button',
+
+                'click the "Quanta" button'
 
             ]
         )
@@ -32,7 +34,9 @@ describe('Login - Plataforma Quanta', () => {
 
                 'escreva "Test@mobi25" em password field',
 
-                'clique em "Entrar na plataforma" button'
+                'clique em "Entrar na plataforma" button',
+
+                'click the "Quanta" button'
 
             ]
         )
