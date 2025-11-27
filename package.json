@@ -26,7 +26,8 @@
     "url": "https://github.com/reispablo/cypress-linguagem-natuaral/issues"
   },
   "homepage": "https://github.com/reispablo/cypress-linguagem-natuaral#readme",
-  "devDependencies": {
-    "cypress": "^15.7.0"
+  "dependencies": {
+    "cypress": "^15.7.0",
+    "cypress-cloud": "^1.13.1"
   }
 }
